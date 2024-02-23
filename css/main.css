@@ -1,0 +1,612 @@
+:root{
+    --primary-color: #171a59;
+    --sec-color: #070b37;
+    --default-gap: 1rem;
+    --default-gap-xl: 2rem;
+    --default-padding-xl: 3em;
+    --default-padding: 2em;
+    --default-padding-sm: 1em;
+    --margin-top-max: 15em;
+    --margin-top-xxl: 10em;
+    --margin-top-xl: 5em;
+    --margin-top-md: 2em;
+    --margin-top-sm: 1em;
+    --margin-top-vs: 0.5em;
+
+    --font-big: 2.5rem;
+    --font-mid: 2em;
+    --font--sm: 1em;
+}
+
+html{
+    font-family: 'Open Sans', sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+h1,h2,h3,h4{
+    font-family: 'Oxygen', sans-serif;
+}
+
+.MarginAuto{
+    margin: auto; 
+}
+
+.maxWidth{
+    max-width: 70.25em; /*arruma o zoom da pagina tambem*/
+}
+
+.fa-check{
+    color: green;
+    font-size: 1.4em;
+}
+
+.col{
+    flex: 1 0 auto; /*flex-grow 1 / 0 n aumentar / depende o width do proprio elemento*/
+    width: 100%;
+}
+
+/*------*/
+
+.top_header{
+    text-align: center;
+    width: 100%;
+}
+
+.top_header_nav{
+    background-color: var(--primary-color);
+}
+
+.top_header_nav ul{
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 0;
+}
+      
+.top_header_nav a{
+    color: white;
+    text-decoration: none;
+    display: block; 
+    padding: 2em;
+}
+
+.top_header_nav li:hover, .top_header_nav li:hover a{
+    background-color: color-mix(in srgb, var(--primary-color), white 10%);
+    color: white;
+}
+
+
+@media screen and (min-width: 48.75em){ /*tabled*/
+    .top_header{
+        background-color: color-mix(in srgb, var(--primary-color), white 10%);
+        backdrop-filter: blur(8px);
+        box-shadow: 0 20px 30px rgba(0,0,0,.15);
+        position: fixed;
+        top: 0;
+        z-index: 1;
+    }
+
+    .top_header_nav li{
+        margin: 0 1em 0.2em 0;
+        display: inline-block;
+    }
+
+    .top_header_nav a{
+        padding: 1.2em 1.2em 1.2em 1.2em;
+    }
+
+    .top_header_nav{
+        background-color: initial;
+    }
+
+    .top_header_nav a:hover{
+        background-color: initial;
+        text-decoration: underline;
+    }
+
+    /*-------------*/
+
+    .top_header_sub{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .top_header_logo{
+        margin-left: 2em;
+    }
+
+    .col-50{
+        width: 50%;
+    }
+
+}
+
+
+
+/*main*/
+
+.mainSection{
+    height: 20em;
+    padding: 2em ;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: var(--default-gap);
+    height: 40em;
+}
+
+.mainText h1{
+    font-size: var(--font-mid);
+    color: black;
+    line-height: 1.3;
+}
+
+.mainText_list{
+    margin-top: 1em;
+}
+
+.mainText_list li{
+    color: black;
+    font-size: 1.5em;
+}
+
+.mainText_list li i{
+    padding-right: 0.2em;
+}
+
+.mainText_plan{
+    margin-top: var(--margin-top-sm);
+}
+
+.mainText_plan h2{
+    font-size: 1.6em;
+    color: black;
+    line-height: 1.3;
+    padding-top: 0.5em;
+}
+
+.mainText_plan p{
+    font-weight: 600;
+    color: black;
+    margin: var(--margin-top-sm) 0 0 0;
+}
+
+.mainText_planH3, .mainText_planH3,.mainText_planH3{
+    color: black;
+}
+
+.mainText_planH3{
+    font-size: var(--font-big);
+    font-weight: 600;
+}
+
+.mainText_planH3 span{
+    font-size: 1.6em;
+}
+
+.mainText_planH3 sup{
+    font-size: 0.9em;
+}
+
+.mainSectionImg{
+    text-align: center;
+}
+
+.mainSection_img {
+    max-width: 85%;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+    outline: 1px solid black;
+}
+
+
+@media screen and (min-width: 48.75em){
+    .mainSection{
+        text-align: initial;
+        flex-direction: row;
+        height: 30em;
+        margin-top: var(--margin-top-xl); 
+    }
+
+    .mainText_list{
+        margin-top: 2.5em;
+    }
+
+    .mainSection_img{
+        max-width: 100%;
+    }
+
+    .mainSection_img {
+        max-width: 100%;
+    }
+    
+}
+
+@media screen and (min-width: 74em){
+    .mainText h1{
+        font-size: var(--font-big);
+    }
+
+}
+
+
+/*midContent*/
+
+
+.midContent{
+    background-color: var(--primary-color);
+    margin-top: var(--margin-top-xxl);
+    width: 100%;
+    padding: none;
+    color: white;
+}
+
+.midContent_div{
+    padding: 2em;
+}
+
+.midContent_title span{
+    font-size: var(--font-mid);
+    line-height: 1.3;
+    font-weight: 600;
+}
+
+.midContent_title P{
+    padding-top: var(--default-padding-sm);
+    font-size: 1.2em;
+}
+
+.midContent_Steps{
+    padding-top: var(--default-padding-xl);
+}
+
+.Steps{
+    width: 100%;
+}
+
+.Steps:not(:first-child){
+    padding-top: var(--default-padding-xl); 
+}
+
+.Steps span{
+    padding: 0.55em 1em;
+    background-color: skyblue;
+    border-radius: 50px;
+    color: black;
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+.Steps h4{
+    padding-top: var(--default-padding-sm);
+    font-size: 1.5em;
+}
+
+@media screen and (min-width: 48.75em){
+
+    .midContent_div{
+        padding: 4em 2em;
+    }
+
+    .Steps h4{
+        padding-top: var(--default-padding-sm);
+        font-size: 1.7em;
+    }
+
+    .midContent_Steps{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        padding-top: var(--default-padding-xl);
+        gap: var(--default-gap-xl);
+    }
+
+    .Steps:not(:nth-child(3)){
+        padding-top: var(--default-padding-xl); 
+    }
+}
+
+@media screen and (min-width: 74em){
+    .midContent_title span{
+        font-size: var(--font-big);
+    }
+
+    .midContent_Steps{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        padding-top: var(--default-padding-xl);
+        gap: var(--default-gap-xl);
+    }
+
+    .Steps{
+        padding-top: var(--default-padding-xl); 
+    }
+}
+
+.midHouses{
+    margin-top: var(--margin-top-xl);
+    padding: 2em;
+    color: black;
+}
+
+.house{
+    text-align: center;
+    margin-top: var(--default-padding);         /*EFEITOS JAVINHAS EM!!!!!!!!!!!!!!!!!*/
+}
+
+
+.house img{
+    width: 100%;
+    height: 30em;
+    border-radius: 10px;
+    outline: 2px solid black;
+    object-fit: cover; /*Muito bom para containers com imagens*/
+    object-position: center;
+    transition: 100ms;
+}
+
+.house img:hover,.house img:focus-visible{
+    outline: 5px solid var(--primary-color);
+}
+
+
+
+@media screen and (min-width: 48.75em){
+    .midHouses{
+        margin-top: var(--margin-top-xxl);
+    }
+
+    .midHouses_houses{
+        margin-top: var(--margin-top-md);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        gap: var(--default-gap-xl);
+    }
+}
+
+@media screen and (min-width: 74em){
+    .midHouses_houses{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.botContentPlan{
+    margin-top: var(--margin-top-xl);
+    padding: 2em;
+}
+
+.botContentPlan_title{
+    color: black;
+}
+
+.botContentPlan_plans{
+    padding-top: 1em;
+}
+
+.plan{
+    padding: 3em 2em;
+    outline: 1px gray solid;
+    margin-top: var(--margin-top-md);
+    text-align: center;
+    border-radius: 5px;
+}
+
+.plan:nth-child(1){
+    background-image: linear-gradient(var(--primary-color) 60%,var(--sec-color));
+    color: white;
+}
+
+.plan:nth-child(2){
+    background-image: linear-gradient(rgb(241, 191, 98) 60%, orange);
+    transition-delay: 200ms;
+    color: black;
+}
+
+.plan:nth-child(3){
+    background-image: linear-gradient(rgb(42, 42, 42) 60%, rgb(9, 9, 9));
+    color: white;
+    transition-delay: 400ms;
+}
+
+.botContentPlan_title span {
+    font-size: var(--font-mid);
+    line-height: 1.3;
+    font-weight: 600;
+}
+
+.botContentPlan_title p{
+    padding-top: var(--default-padding-sm);
+    font-size: 1.2em;
+    line-height: 1.3;
+}
+
+.top_plan span{
+    font-size: var(--font-mid);
+    line-height: 1.3;
+    font-weight: 600;
+}
+
+.top_plan p{
+    font-size: 1.1em;
+    line-height: 1.3;
+    padding-top: 0.5em;
+}
+
+.mid_plan{
+    padding: 3em 0;
+}
+
+.mid_plan h3{
+    font-size: 2.4em;
+    font-weight: 600;
+    padding: 0;
+}
+
+.mid_plan span{
+    font-size: 1.7em;
+}
+
+.mid_plan sup{
+    font-size: 1em;
+}
+
+.mid_plan a{
+    background-color: #5288af ;
+    color: white;
+    padding: 0.5em;
+    display: block;
+    text-align: center;
+    margin: auto;
+    border-radius: 25px;
+    font-size: 1.1em;
+    transition: 100ms;
+    font-weight: 600;
+    max-width: 250px;
+}
+
+.mid_plan a:hover{
+    background-color: #77a3c3 ;
+    color: black;
+}
+
+.bot_plan li{
+    font-size: 1.1em;
+}
+
+.bot_plan li:not(:first-child){
+    padding-top: 1em;
+}
+
+@media screen and (min-width: 48.75em){
+    .botContentPlan_plans{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        gap: var(--default-gap-xl);
+    }
+
+}
+
+@media screen and (min-width: 74em){
+    .botContentPlan_plans{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .botContentPlan_title span{
+        font-size: var(--font-big);
+    }
+}
+
+.footer{
+    margin-top: var(--margin-top-xl);
+    background-color: rgb(38, 38, 38) !important; /*por causa do bulma*/
+    padding-bottom: 3.5em;
+} 
+
+.footer_div{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.footer_div ul li, .footer_div a{
+    color: gray;
+}
+
+.footer_div ul li{
+    padding-top: 0.6em;
+}
+
+.footer_div ul li a:hover{
+    color: rgb(204, 204, 204);
+}
+
+.brands_div ul{
+    display: flex;
+    gap: 2em;
+    flex-direction: column;
+}
+
+.fa-brands {
+    font-size: 1.8em;
+    color: white;
+}
+
+
+.copyright{
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+@media screen and (min-width: 48.75em){
+    .brands_div ul{
+        flex-direction: row;
+    }
+
+    .brands_div ul{
+        gap: 1.5em;
+    }
+}
+
+
+/* Para aparelhos muito pequenos */
+
+@media screen and (max-width: 23.875em){
+    .midContent_div{
+        padding: 1em;
+    }
+    
+    .midHouses{
+        margin-top: var(--margin-top-xl);
+        padding: 1em;
+        color: black;
+    }
+
+    .botContentPlan{
+        margin-top: var(--margin-top-xl);
+        padding: 1em;
+    }
+
+
+}
+
+
+
+/*animações*/
+
+.hidden, .hidden_one{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show, .show_one{
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateX(0);
+}
+
+.hidden_up{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(100%);
+    transition: all 1s;
+}
+
+.show_up{
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0);
+}
+
+
+
+
+
+
+
+
